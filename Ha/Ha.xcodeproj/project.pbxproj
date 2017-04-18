@@ -12,6 +12,10 @@
 		99173ECB1EA0D1D200CDE419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99173EC91EA0D1D200CDE419 /* Main.storyboard */; };
 		99173ECD1EA0D1D200CDE419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99173ECC1EA0D1D200CDE419 /* Assets.xcassets */; };
 		99173ED01EA0D1D200CDE419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99173ECE1EA0D1D200CDE419 /* LaunchScreen.storyboard */; };
+		99173EDB1EA0D2AD00CDE419 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99173EDA1EA0D2AD00CDE419 /* config.swift */; };
+		99173EDF1EA0D45300CDE419 /* 隶变体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99173EDE1EA0D45300CDE419 /* 隶变体.ttf */; };
+		99173EE41EA0D61F00CDE419 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 99173EE11EA0D61F00CDE419 /* ProgressHUD.bundle */; };
+		99173EE51EA0D61F00CDE419 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 99173EE31EA0D61F00CDE419 /* ProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,12 @@
 		99173ECC1EA0D1D200CDE419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99173ECF1EA0D1D200CDE419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99173ED11EA0D1D200CDE419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99173ED91EA0D28C00CDE419 /* bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridging.h; sourceTree = "<group>"; };
+		99173EDA1EA0D2AD00CDE419 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		99173EDE1EA0D45300CDE419 /* 隶变体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "隶变体.ttf"; sourceTree = "<group>"; };
+		99173EE11EA0D61F00CDE419 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		99173EE21EA0D61F00CDE419 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		99173EE31EA0D61F00CDE419 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +48,7 @@
 		99173EB91EA0D1D200CDE419 = {
 			isa = PBXGroup;
 			children = (
+				99173EDD1EA0D44500CDE419 /* Resource */,
 				99173EC41EA0D1D200CDE419 /* Ha */,
 				99173EC31EA0D1D200CDE419 /* Products */,
 			);
@@ -60,8 +71,29 @@
 				99173ECC1EA0D1D200CDE419 /* Assets.xcassets */,
 				99173ECE1EA0D1D200CDE419 /* LaunchScreen.storyboard */,
 				99173ED11EA0D1D200CDE419 /* Info.plist */,
+				99173ED91EA0D28C00CDE419 /* bridging.h */,
+				99173EDA1EA0D2AD00CDE419 /* config.swift */,
 			);
 			path = Ha;
+			sourceTree = "<group>";
+		};
+		99173EDD1EA0D44500CDE419 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				99173EE01EA0D61F00CDE419 /* ProgressHUD */,
+				99173EDE1EA0D45300CDE419 /* 隶变体.ttf */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		99173EE01EA0D61F00CDE419 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				99173EE11EA0D61F00CDE419 /* ProgressHUD.bundle */,
+				99173EE21EA0D61F00CDE419 /* ProgressHUD.h */,
+				99173EE31EA0D61F00CDE419 /* ProgressHUD.m */,
+			);
+			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,8 +156,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99173EDF1EA0D45300CDE419 /* 隶变体.ttf in Resources */,
 				99173ED01EA0D1D200CDE419 /* LaunchScreen.storyboard in Resources */,
 				99173ECD1EA0D1D200CDE419 /* Assets.xcassets in Resources */,
+				99173EE41EA0D61F00CDE419 /* ProgressHUD.bundle in Resources */,
 				99173ECB1EA0D1D200CDE419 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99173EDB1EA0D2AD00CDE419 /* config.swift in Sources */,
 				99173EC81EA0D1D200CDE419 /* ViewController.swift in Sources */,
+				99173EE51EA0D61F00CDE419 /* ProgressHUD.m in Sources */,
 				99173EC61EA0D1D200CDE419 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +302,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghaiyong.Ha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/yangqian/Ha/Ha/Ha/bridging.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -279,6 +316,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghaiyong.Ha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/yangqian/Ha/Ha/Ha/bridging.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -302,6 +340,7 @@
 				99173ED61EA0D1D200CDE419 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

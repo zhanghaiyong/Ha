@@ -1,0 +1,15 @@
+platform :ios, '8.0'
+
+target 'Ha' do
+
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'SDWebImage'
+pod 'Reachability'
+pod 'AVOSCloud' 
+pod 'MWPhotoBrowser', '~> 2.1.2'
+pod 'JVFloatLabeledTextField'
+pod 'IQKeyboardManager','3.3.7'
+pod 'BaiduMapKit'
+
+end
