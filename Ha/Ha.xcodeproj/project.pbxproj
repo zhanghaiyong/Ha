@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E873F6E0D15244414B8420A /* libPods-Ha.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD913E2F96BAAFFB5A40A6B2 /* libPods-Ha.a */; };
 		99173EC61EA0D1D200CDE419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99173EC51EA0D1D200CDE419 /* AppDelegate.swift */; };
 		99173EC81EA0D1D200CDE419 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99173EC71EA0D1D200CDE419 /* ViewController.swift */; };
 		99173ECB1EA0D1D200CDE419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99173EC91EA0D1D200CDE419 /* Main.storyboard */; };
 		99173ECD1EA0D1D200CDE419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99173ECC1EA0D1D200CDE419 /* Assets.xcassets */; };
 		99173ED01EA0D1D200CDE419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99173ECE1EA0D1D200CDE419 /* LaunchScreen.storyboard */; };
 		99173EDB1EA0D2AD00CDE419 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99173EDA1EA0D2AD00CDE419 /* config.swift */; };
-		99173EDF1EA0D45300CDE419 /* 隶变体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99173EDE1EA0D45300CDE419 /* 隶变体.ttf */; };
-		99173EE41EA0D61F00CDE419 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 99173EE11EA0D61F00CDE419 /* ProgressHUD.bundle */; };
-		99173EE51EA0D61F00CDE419 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 99173EE31EA0D61F00CDE419 /* ProgressHUD.m */; };
+		993653DD1EA850FF005A4108 /* 隶变体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 993653DC1EA850FF005A4108 /* 隶变体.ttf */; };
+		993653E21EA85108005A4108 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 993653DF1EA85108005A4108 /* ProgressHUD.bundle */; };
+		993653E31EA85108005A4108 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 993653E11EA85108005A4108 /* ProgressHUD.m */; };
+		9997F2C71EA7331B00EEDC3D /* FactoryFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997F2C61EA7331B00EEDC3D /* FactoryFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +30,14 @@
 		99173ED11EA0D1D200CDE419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99173ED91EA0D28C00CDE419 /* bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridging.h; sourceTree = "<group>"; };
 		99173EDA1EA0D2AD00CDE419 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
-		99173EDE1EA0D45300CDE419 /* 隶变体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "隶变体.ttf"; sourceTree = "<group>"; };
-		99173EE11EA0D61F00CDE419 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
-		99173EE21EA0D61F00CDE419 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
-		99173EE31EA0D61F00CDE419 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		993653DC1EA850FF005A4108 /* 隶变体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "隶变体.ttf"; sourceTree = "<group>"; };
+		993653DF1EA85108005A4108 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		993653E01EA85108005A4108 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		993653E11EA85108005A4108 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		9997F2C61EA7331B00EEDC3D /* FactoryFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryFile.swift; sourceTree = "<group>"; };
+		B7661987DFBF82709EBBC4C2 /* Pods-Ha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ha/Pods-Ha.release.xcconfig"; sourceTree = "<group>"; };
+		CD913E2F96BAAFFB5A40A6B2 /* libPods-Ha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D99B0C58AFACEC3DD100B909 /* Pods-Ha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ha/Pods-Ha.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,18 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E873F6E0D15244414B8420A /* libPods-Ha.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3544ECB78D2BE7AC08DDC495 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D99B0C58AFACEC3DD100B909 /* Pods-Ha.debug.xcconfig */,
+				B7661987DFBF82709EBBC4C2 /* Pods-Ha.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		95C6B06C8D86F9B30A34201E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD913E2F96BAAFFB5A40A6B2 /* libPods-Ha.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		99173EB91EA0D1D200CDE419 = {
 			isa = PBXGroup;
 			children = (
 				99173EDD1EA0D44500CDE419 /* Resource */,
 				99173EC41EA0D1D200CDE419 /* Ha */,
 				99173EC31EA0D1D200CDE419 /* Products */,
+				3544ECB78D2BE7AC08DDC495 /* Pods */,
+				95C6B06C8D86F9B30A34201E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +91,7 @@
 		99173EC41EA0D1D200CDE419 /* Ha */ = {
 			isa = PBXGroup;
 			children = (
+				9997F2C51EA7330600EEDC3D /* Helper */,
 				99173EC51EA0D1D200CDE419 /* AppDelegate.swift */,
 				99173EC71EA0D1D200CDE419 /* ViewController.swift */,
 				99173EC91EA0D1D200CDE419 /* Main.storyboard */,
@@ -80,20 +107,28 @@
 		99173EDD1EA0D44500CDE419 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				99173EE01EA0D61F00CDE419 /* ProgressHUD */,
-				99173EDE1EA0D45300CDE419 /* 隶变体.ttf */,
+				993653DC1EA850FF005A4108 /* 隶变体.ttf */,
+				993653DE1EA85108005A4108 /* ProgressHUD */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		99173EE01EA0D61F00CDE419 /* ProgressHUD */ = {
+		993653DE1EA85108005A4108 /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				99173EE11EA0D61F00CDE419 /* ProgressHUD.bundle */,
-				99173EE21EA0D61F00CDE419 /* ProgressHUD.h */,
-				99173EE31EA0D61F00CDE419 /* ProgressHUD.m */,
+				993653DF1EA85108005A4108 /* ProgressHUD.bundle */,
+				993653E01EA85108005A4108 /* ProgressHUD.h */,
+				993653E11EA85108005A4108 /* ProgressHUD.m */,
 			);
 			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		9997F2C51EA7330600EEDC3D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9997F2C61EA7331B00EEDC3D /* FactoryFile.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99173ED41EA0D1D200CDE419 /* Build configuration list for PBXNativeTarget "Ha" */;
 			buildPhases = (
+				2BA2CF43E4441F517A292DA5 /* [CP] Check Pods Manifest.lock */,
 				99173EBE1EA0D1D200CDE419 /* Sources */,
 				99173EBF1EA0D1D200CDE419 /* Frameworks */,
 				99173EC01EA0D1D200CDE419 /* Resources */,
+				581DF2D65FC0023BB715D13A /* [CP] Embed Pods Frameworks */,
+				6E864E406A0C6BEEE2C4B742 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,15 +194,63 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99173EDF1EA0D45300CDE419 /* 隶变体.ttf in Resources */,
+				993653DD1EA850FF005A4108 /* 隶变体.ttf in Resources */,
 				99173ED01EA0D1D200CDE419 /* LaunchScreen.storyboard in Resources */,
 				99173ECD1EA0D1D200CDE419 /* Assets.xcassets in Resources */,
-				99173EE41EA0D61F00CDE419 /* ProgressHUD.bundle in Resources */,
+				993653E21EA85108005A4108 /* ProgressHUD.bundle in Resources */,
 				99173ECB1EA0D1D200CDE419 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BA2CF43E4441F517A292DA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		581DF2D65FC0023BB715D13A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ha/Pods-Ha-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E864E406A0C6BEEE2C4B742 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ha/Pods-Ha-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		99173EBE1EA0D1D200CDE419 /* Sources */ = {
@@ -173,7 +259,8 @@
 			files = (
 				99173EDB1EA0D2AD00CDE419 /* config.swift in Sources */,
 				99173EC81EA0D1D200CDE419 /* ViewController.swift in Sources */,
-				99173EE51EA0D61F00CDE419 /* ProgressHUD.m in Sources */,
+				993653E31EA85108005A4108 /* ProgressHUD.m in Sources */,
+				9997F2C71EA7331B00EEDC3D /* FactoryFile.swift in Sources */,
 				99173EC61EA0D1D200CDE419 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +382,7 @@
 		};
 		99173ED51EA0D1D200CDE419 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D99B0C58AFACEC3DD100B909 /* Pods-Ha.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AKEZGLTY8R;
@@ -309,6 +397,7 @@
 		};
 		99173ED61EA0D1D200CDE419 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7661987DFBF82709EBBC4C2 /* Pods-Ha.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AKEZGLTY8R;

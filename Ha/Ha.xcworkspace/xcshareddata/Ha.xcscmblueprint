@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "45837D304C7647C94D633097D9CACE2442087F91",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "45837D304C7647C94D633097D9CACE2442087F91" : 9223372036854775807,
+    "3C8C2C8E6244B6F57D113283D13BFA0067B9A837" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "71317A7A-8568-4224-A606-4E630DF1139B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "45837D304C7647C94D633097D9CACE2442087F91" : "Ha\/",
+    "3C8C2C8E6244B6F57D113283D13BFA0067B9A837" : "GoodBook\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Ha",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Ha\/Ha.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zhanghaiyong\/GoodBook.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3C8C2C8E6244B6F57D113283D13BFA0067B9A837"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zhanghaiyong\/Ha.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "45837D304C7647C94D633097D9CACE2442087F91"
+    }
+  ]
+}
