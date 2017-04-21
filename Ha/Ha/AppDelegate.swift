@@ -15,7 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+
+        UINavigationBar.appearance().tintColor = UIColor.white;
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for: UIBarMetrics.default)
+        
+        UINavigationBar.appearance().barTintColor = mainColor
+
+        
+        let main =  MainViewController()
+        self.window?.rootViewController = UINavigationController(rootViewController: main)
+        
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

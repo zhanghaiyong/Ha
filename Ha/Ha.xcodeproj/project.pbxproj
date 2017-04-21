@@ -9,22 +9,27 @@
 /* Begin PBXBuildFile section */
 		5E873F6E0D15244414B8420A /* libPods-Ha.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD913E2F96BAAFFB5A40A6B2 /* libPods-Ha.a */; };
 		99173EC61EA0D1D200CDE419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99173EC51EA0D1D200CDE419 /* AppDelegate.swift */; };
-		99173EC81EA0D1D200CDE419 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99173EC71EA0D1D200CDE419 /* ViewController.swift */; };
-		99173ECB1EA0D1D200CDE419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99173EC91EA0D1D200CDE419 /* Main.storyboard */; };
 		99173ECD1EA0D1D200CDE419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99173ECC1EA0D1D200CDE419 /* Assets.xcassets */; };
 		99173ED01EA0D1D200CDE419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99173ECE1EA0D1D200CDE419 /* LaunchScreen.storyboard */; };
 		99173EDB1EA0D2AD00CDE419 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99173EDA1EA0D2AD00CDE419 /* config.swift */; };
 		993653DD1EA850FF005A4108 /* 隶变体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 993653DC1EA850FF005A4108 /* 隶变体.ttf */; };
 		993653E21EA85108005A4108 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 993653DF1EA85108005A4108 /* ProgressHUD.bundle */; };
 		993653E31EA85108005A4108 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 993653E11EA85108005A4108 /* ProgressHUD.m */; };
+		993653E61EA89713005A4108 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993653E51EA89713005A4108 /* MainViewController.swift */; };
+		993653EC1EA89C18005A4108 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993653EA1EA89C18005A4108 /* MainCell.swift */; };
+		993653ED1EA89C18005A4108 /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 993653EB1EA89C18005A4108 /* MainCell.xib */; };
+		993653EF1EA8AA81005A4108 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993653EE1EA8AA81005A4108 /* JokeModel.swift */; };
+		99910BAC1EA9D37100C26B51 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 99910BAB1EA9D37100C26B51 /* UIViewExt.m */; };
+		99910BAF1EA9E57C00C26B51 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99910BAE1EA9E57C00C26B51 /* NoDataView.swift */; };
+		99910BB11EA9E58A00C26B51 /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99910BB01EA9E58A00C26B51 /* NoDataView.xib */; };
+		99910BB31EA9EB7800C26B51 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99910BB21EA9EB7800C26B51 /* SegmentView.swift */; };
+		99910BB51EA9EB8000C26B51 /* SegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99910BB41EA9EB8000C26B51 /* SegmentView.xib */; };
 		9997F2C71EA7331B00EEDC3D /* FactoryFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997F2C61EA7331B00EEDC3D /* FactoryFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		99173EC21EA0D1D200CDE419 /* Ha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99173EC51EA0D1D200CDE419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		99173EC71EA0D1D200CDE419 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		99173ECA1EA0D1D200CDE419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99173ECC1EA0D1D200CDE419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99173ECF1EA0D1D200CDE419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99173ED11EA0D1D200CDE419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +39,16 @@
 		993653DF1EA85108005A4108 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		993653E01EA85108005A4108 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		993653E11EA85108005A4108 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		993653E51EA89713005A4108 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		993653EA1EA89C18005A4108 /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		993653EB1EA89C18005A4108 /* MainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
+		993653EE1EA8AA81005A4108 /* JokeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		99910BAA1EA9D37100C26B51 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		99910BAB1EA9D37100C26B51 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		99910BAE1EA9E57C00C26B51 /* NoDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		99910BB01EA9E58A00C26B51 /* NoDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
+		99910BB21EA9EB7800C26B51 /* SegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
+		99910BB41EA9EB8000C26B51 /* SegmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentView.xib; sourceTree = "<group>"; };
 		9997F2C61EA7331B00EEDC3D /* FactoryFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryFile.swift; sourceTree = "<group>"; };
 		B7661987DFBF82709EBBC4C2 /* Pods-Ha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ha/Pods-Ha.release.xcconfig"; sourceTree = "<group>"; };
 		CD913E2F96BAAFFB5A40A6B2 /* libPods-Ha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,10 +106,10 @@
 		99173EC41EA0D1D200CDE419 /* Ha */ = {
 			isa = PBXGroup;
 			children = (
+				99910BAD1EA9E55800C26B51 /* Common */,
+				993653E41EA89695005A4108 /* main */,
 				9997F2C51EA7330600EEDC3D /* Helper */,
 				99173EC51EA0D1D200CDE419 /* AppDelegate.swift */,
-				99173EC71EA0D1D200CDE419 /* ViewController.swift */,
-				99173EC91EA0D1D200CDE419 /* Main.storyboard */,
 				99173ECC1EA0D1D200CDE419 /* Assets.xcassets */,
 				99173ECE1EA0D1D200CDE419 /* LaunchScreen.storyboard */,
 				99173ED11EA0D1D200CDE419 /* Info.plist */,
@@ -107,6 +122,8 @@
 		99173EDD1EA0D44500CDE419 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				99910BAA1EA9D37100C26B51 /* UIViewExt.h */,
+				99910BAB1EA9D37100C26B51 /* UIViewExt.m */,
 				993653DC1EA850FF005A4108 /* 隶变体.ttf */,
 				993653DE1EA85108005A4108 /* ProgressHUD */,
 			);
@@ -121,6 +138,52 @@
 				993653E11EA85108005A4108 /* ProgressHUD.m */,
 			);
 			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		993653E41EA89695005A4108 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				993653E91EA89BFC005A4108 /* C */,
+				993653E81EA89BF8005A4108 /* V */,
+				993653E71EA89BF3005A4108 /* M */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		993653E71EA89BF3005A4108 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				993653EE1EA8AA81005A4108 /* JokeModel.swift */,
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		993653E81EA89BF8005A4108 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				993653EA1EA89C18005A4108 /* MainCell.swift */,
+				993653EB1EA89C18005A4108 /* MainCell.xib */,
+				99910BB21EA9EB7800C26B51 /* SegmentView.swift */,
+				99910BB41EA9EB8000C26B51 /* SegmentView.xib */,
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
+		993653E91EA89BFC005A4108 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				993653E51EA89713005A4108 /* MainViewController.swift */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
+		99910BAD1EA9E55800C26B51 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				99910BAE1EA9E57C00C26B51 /* NoDataView.swift */,
+				99910BB01EA9E58A00C26B51 /* NoDataView.xib */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		9997F2C51EA7330600EEDC3D /* Helper */ = {
@@ -197,8 +260,10 @@
 				993653DD1EA850FF005A4108 /* 隶变体.ttf in Resources */,
 				99173ED01EA0D1D200CDE419 /* LaunchScreen.storyboard in Resources */,
 				99173ECD1EA0D1D200CDE419 /* Assets.xcassets in Resources */,
+				99910BB11EA9E58A00C26B51 /* NoDataView.xib in Resources */,
 				993653E21EA85108005A4108 /* ProgressHUD.bundle in Resources */,
-				99173ECB1EA0D1D200CDE419 /* Main.storyboard in Resources */,
+				993653ED1EA89C18005A4108 /* MainCell.xib in Resources */,
+				99910BB51EA9EB8000C26B51 /* SegmentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,10 +322,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99910BAC1EA9D37100C26B51 /* UIViewExt.m in Sources */,
+				993653EF1EA8AA81005A4108 /* JokeModel.swift in Sources */,
 				99173EDB1EA0D2AD00CDE419 /* config.swift in Sources */,
-				99173EC81EA0D1D200CDE419 /* ViewController.swift in Sources */,
 				993653E31EA85108005A4108 /* ProgressHUD.m in Sources */,
+				993653EC1EA89C18005A4108 /* MainCell.swift in Sources */,
+				993653E61EA89713005A4108 /* MainViewController.swift in Sources */,
 				9997F2C71EA7331B00EEDC3D /* FactoryFile.swift in Sources */,
+				99910BAF1EA9E57C00C26B51 /* NoDataView.swift in Sources */,
+				99910BB31EA9EB7800C26B51 /* SegmentView.swift in Sources */,
 				99173EC61EA0D1D200CDE419 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,14 +338,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		99173EC91EA0D1D200CDE419 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				99173ECA1EA0D1D200CDE419 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		99173ECE1EA0D1D200CDE419 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -388,7 +450,7 @@
 				DEVELOPMENT_TEAM = AKEZGLTY8R;
 				INFOPLIST_FILE = Ha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghaiyong.Ha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sosoyy.m.api;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/yangqian/Ha/Ha/Ha/bridging.h;
 				SWIFT_VERSION = 3.0;
@@ -403,7 +465,7 @@
 				DEVELOPMENT_TEAM = AKEZGLTY8R;
 				INFOPLIST_FILE = Ha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghaiyong.Ha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sosoyy.m.api;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/yangqian/Ha/Ha/Ha/bridging.h;
 				SWIFT_VERSION = 3.0;
