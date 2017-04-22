@@ -11,5 +11,5 @@ pod 'JVFloatLabeledTextField'
 pod 'IQKeyboardManager','3.3.7'
 pod 'BaiduMapKit'
 pod 'AFNetworking'
-
+pod 'JVFloatLabeledTextField'
 end

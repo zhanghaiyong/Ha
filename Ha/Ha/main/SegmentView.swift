@@ -6,32 +6,36 @@
 //  Copyright © 2017年 zhanghaiyong. All rights reserved.
 //
 
+typealias segmentBlock = (_ tag : Int) ->Void
+
 import UIKit
 
 class SegmentView: UIView {
     
     @IBOutlet weak var jokeBtn: UIButton!
     @IBOutlet weak var imageBtn: UIButton!
-    
+    var callBack : segmentBlock?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.backgroundColor = mainColor
         self.layer.cornerRadius = 3
+        self.layer.borderColor = mainColor.cgColor
+        self.layer.borderWidth = 1
         self.clipsToBounds = true;
         
-        let maskPath1 = UIBezierPath.init(roundedRect: self.jokeBtn.frame, byRoundingCorners: [.topLeft,.bottomLeft], cornerRadii: CGSize(width: 3, height: 3))
-        let maskLayer1 = CAShapeLayer();
-        maskLayer1.frame = self.jokeBtn.bounds;
-        maskLayer1.path = maskPath1.cgPath;
-        self.jokeBtn.layer.mask = maskLayer1;
-
-        let maskPath2 = UIBezierPath.init(roundedRect: self.jokeBtn.frame, byRoundingCorners: [.topRight,.bottomRight], cornerRadii: CGSize(width: 3, height: 3))
-        let maskLayer2 = CAShapeLayer();
-        maskLayer2.frame = self.jokeBtn.bounds;
-        maskLayer2.path = maskPath2.cgPath;
-        self.imageBtn.layer.mask = maskLayer2;
+//        let maskPath1 = UIBezierPath.init(roundedRect: self.jokeBtn.frame, byRoundingCorners: [.topLeft,.bottomLeft], cornerRadii: CGSize(width: 3, height: 3))
+//        let maskLayer1 = CAShapeLayer();
+//        maskLayer1.frame = self.jokeBtn.bounds;
+//        maskLayer1.path = maskPath1.cgPath;
+//        self.jokeBtn.layer.mask = maskLayer1;
+//
+//        let maskPath2 = UIBezierPath.init(roundedRect: self.jokeBtn.frame, byRoundingCorners: [.topRight,.bottomRight], cornerRadii: CGSize(width: 3, height: 3))
+//        let maskLayer2 = CAShapeLayer();
+//        maskLayer2.frame = self.jokeBtn.bounds;
+//        maskLayer2.path = maskPath2.cgPath;
+//        self.imageBtn.layer.mask = maskLayer2;
     }
     
     @IBAction func switchAction(_ sender: Any) {
@@ -47,5 +51,6 @@ class SegmentView: UIView {
             self.imageBtn.isSelected = true
         }
         
+        self.callBack!(button.tag)
     }
 }

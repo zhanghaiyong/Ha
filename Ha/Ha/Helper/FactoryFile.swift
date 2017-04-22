@@ -12,5 +12,6 @@ import UIKit
 
 class GeneralFactory: NSObject {
 
-
+  
+    
 }

@@ -14,4 +14,5 @@ class JokeModel: NSObject {
     var hashId : String = ""
     var unixtime : String = ""
     var updatetime : String = ""
+    var url : String = ""
 }

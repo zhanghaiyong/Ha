@@ -23,3 +23,6 @@ let imageForTime = "http://japi.juhe.cn/joke/img/list.from"
 
 //最新趣图
 let newImage = "http://japi.juhe.cn/joke/img/text.from"
+
+//随机
+let randomjoke = "http://v.juhe.cn/joke/randJoke.php"

@@ -25,6 +25,10 @@
 		99910BB31EA9EB7800C26B51 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99910BB21EA9EB7800C26B51 /* SegmentView.swift */; };
 		99910BB51EA9EB8000C26B51 /* SegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99910BB41EA9EB8000C26B51 /* SegmentView.xib */; };
 		9997F2C71EA7331B00EEDC3D /* FactoryFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997F2C61EA7331B00EEDC3D /* FactoryFile.swift */; };
+		99ECBF3A1EAB313300959FBD /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECBF381EAB313300959FBD /* ImageCell.swift */; };
+		99ECBF3B1EAB313300959FBD /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99ECBF391EAB313300959FBD /* ImageCell.xib */; };
+		99ECBF431EAB4CF700959FBD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECBF421EAB4CF700959FBD /* LoginViewController.swift */; };
+		99ECBF471EAB573D00959FBD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECBF461EAB573D00959FBD /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		99910BB21EA9EB7800C26B51 /* SegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
 		99910BB41EA9EB8000C26B51 /* SegmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentView.xib; sourceTree = "<group>"; };
 		9997F2C61EA7331B00EEDC3D /* FactoryFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryFile.swift; sourceTree = "<group>"; };
+		99ECBF381EAB313300959FBD /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		99ECBF391EAB313300959FBD /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		99ECBF421EAB4CF700959FBD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		99ECBF461EAB573D00959FBD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B7661987DFBF82709EBBC4C2 /* Pods-Ha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ha/Pods-Ha.release.xcconfig"; sourceTree = "<group>"; };
 		CD913E2F96BAAFFB5A40A6B2 /* libPods-Ha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ha.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99B0C58AFACEC3DD100B909 /* Pods-Ha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ha/Pods-Ha.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,8 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				99910BAD1EA9E55800C26B51 /* Common */,
-				993653E41EA89695005A4108 /* main */,
 				9997F2C51EA7330600EEDC3D /* Helper */,
+				99ECBF3C1EAB453E00959FBD /* Login */,
+				993653E41EA89695005A4108 /* main */,
 				99173EC51EA0D1D200CDE419 /* AppDelegate.swift */,
 				99173ECC1EA0D1D200CDE419 /* Assets.xcassets */,
 				99173ECE1EA0D1D200CDE419 /* LaunchScreen.storyboard */,
@@ -163,6 +172,8 @@
 			children = (
 				993653EA1EA89C18005A4108 /* MainCell.swift */,
 				993653EB1EA89C18005A4108 /* MainCell.xib */,
+				99ECBF381EAB313300959FBD /* ImageCell.swift */,
+				99ECBF391EAB313300959FBD /* ImageCell.xib */,
 				99910BB21EA9EB7800C26B51 /* SegmentView.swift */,
 				99910BB41EA9EB8000C26B51 /* SegmentView.xib */,
 			);
@@ -192,6 +203,39 @@
 				9997F2C61EA7331B00EEDC3D /* FactoryFile.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		99ECBF3C1EAB453E00959FBD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				99ECBF411EAB4CE600959FBD /* C */,
+				99ECBF401EAB4CE200959FBD /* V */,
+				99ECBF3F1EAB4CDD00959FBD /* M */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		99ECBF3F1EAB4CDD00959FBD /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		99ECBF401EAB4CE200959FBD /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
+		99ECBF411EAB4CE600959FBD /* C */ = {
+			isa = PBXGroup;
+			children = (
+				99ECBF421EAB4CF700959FBD /* LoginViewController.swift */,
+				99ECBF461EAB573D00959FBD /* RegisterViewController.swift */,
+			);
+			name = C;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				993653DD1EA850FF005A4108 /* 隶变体.ttf in Resources */,
+				99ECBF3B1EAB313300959FBD /* ImageCell.xib in Resources */,
 				99173ED01EA0D1D200CDE419 /* LaunchScreen.storyboard in Resources */,
 				99173ECD1EA0D1D200CDE419 /* Assets.xcassets in Resources */,
 				99910BB11EA9E58A00C26B51 /* NoDataView.xib in Resources */,
@@ -322,14 +367,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99ECBF431EAB4CF700959FBD /* LoginViewController.swift in Sources */,
 				99910BAC1EA9D37100C26B51 /* UIViewExt.m in Sources */,
 				993653EF1EA8AA81005A4108 /* JokeModel.swift in Sources */,
+				99ECBF3A1EAB313300959FBD /* ImageCell.swift in Sources */,
 				99173EDB1EA0D2AD00CDE419 /* config.swift in Sources */,
 				993653E31EA85108005A4108 /* ProgressHUD.m in Sources */,
 				993653EC1EA89C18005A4108 /* MainCell.swift in Sources */,
 				993653E61EA89713005A4108 /* MainViewController.swift in Sources */,
 				9997F2C71EA7331B00EEDC3D /* FactoryFile.swift in Sources */,
 				99910BAF1EA9E57C00C26B51 /* NoDataView.swift in Sources */,
+				99ECBF471EAB573D00959FBD /* RegisterViewController.swift in Sources */,
 				99910BB31EA9EB7800C26B51 /* SegmentView.swift in Sources */,
 				99173EC61EA0D1D200CDE419 /* AppDelegate.swift in Sources */,
 			);

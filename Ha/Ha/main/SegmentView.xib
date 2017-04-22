@@ -16,12 +16,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SegmentView" customModule="Ha" customModuleProvider="target">
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="SegmentView" customModule="Ha" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="339" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kme-0t-7eY">
-                    <rect key="frame" x="1" y="1" width="168" height="58"/>
+                    <rect key="frame" x="0.0" y="0.0" width="169" height="60"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" name="BauhausITC" family="Bauhaus ITC" pointSize="16"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -36,7 +36,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" clipsSubviews="YES" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eU-8q-cfO">
-                    <rect key="frame" x="170" y="1" width="168" height="58"/>
+                    <rect key="frame" x="170" y="0.0" width="169" height="60"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" name="BauhausITC" family="Bauhaus ITC" pointSize="16"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -53,13 +53,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="3eU-8q-cfO" secondAttribute="bottom" constant="1" id="4qh-aC-Ber"/>
-                <constraint firstAttribute="bottom" secondItem="kme-0t-7eY" secondAttribute="bottom" constant="1" id="5HQ-ox-8bE"/>
-                <constraint firstAttribute="trailing" secondItem="3eU-8q-cfO" secondAttribute="trailing" constant="1" id="URX-h1-YDC"/>
-                <constraint firstItem="kme-0t-7eY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="gWa-Sa-Mb1"/>
-                <constraint firstItem="kme-0t-7eY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="1" id="kkD-an-wWj"/>
+                <constraint firstAttribute="bottom" secondItem="3eU-8q-cfO" secondAttribute="bottom" id="4qh-aC-Ber"/>
+                <constraint firstAttribute="bottom" secondItem="kme-0t-7eY" secondAttribute="bottom" id="5HQ-ox-8bE"/>
+                <constraint firstAttribute="trailing" secondItem="3eU-8q-cfO" secondAttribute="trailing" id="URX-h1-YDC"/>
+                <constraint firstItem="kme-0t-7eY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gWa-Sa-Mb1"/>
+                <constraint firstItem="kme-0t-7eY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kkD-an-wWj"/>
                 <constraint firstItem="3eU-8q-cfO" firstAttribute="width" secondItem="kme-0t-7eY" secondAttribute="width" id="lyJ-LG-DhT"/>
-                <constraint firstItem="3eU-8q-cfO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="pzN-fA-VER"/>
+                <constraint firstItem="3eU-8q-cfO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pzN-fA-VER"/>
                 <constraint firstItem="3eU-8q-cfO" firstAttribute="leading" secondItem="kme-0t-7eY" secondAttribute="trailing" constant="1" id="yfj-rc-4Oh"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
