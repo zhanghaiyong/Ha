@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController,UITextFieldDelegate {
 
     var userTextF : JVFloatLabeledTextField!
     var passwordTextF : JVFloatLabeledTextField!
@@ -39,27 +39,39 @@ class RegisterViewController: UIViewController {
         logoImage.image = UIImage(named: "logo")
         self.view.addSubview(logoImage)
         
-        self.userTextF = JVFloatLabeledTextField(frame: CGRect(x: 30, y: logoImage.bottom+15, width: kSCREENWIDTH-60, height: 44))
-        self.userTextF.borderStyle = .roundedRect
+        self.userTextF = JVFloatLabeledTextField(frame: CGRect(x: 30, y: logoImage.bottom+15, width: kSCREENWIDTH-60, height: 40))
+        self.userTextF.layer.borderColor = mainColor.cgColor
+        self.userTextF.layer.borderWidth = 0.5
+        self.userTextF.layer.cornerRadius = 3
+        self.userTextF.setValue(10, forKey: "paddingLeft")
+        self.userTextF.delegate = self
         self.userTextF.font = UIFont(name: kFONT, size: 15)
         self.userTextF.placeholder = "用户名"
         self.view.addSubview(self.userTextF)
         
-        self.passwordTextF = JVFloatLabeledTextField(frame: CGRect(x: 30, y: self.userTextF.bottom+15, width: kSCREENWIDTH-60, height: 44))
+        self.passwordTextF = JVFloatLabeledTextField(frame: CGRect(x: 30, y: self.userTextF.bottom+15, width: kSCREENWIDTH-60, height: 40))
         self.passwordTextF.font = UIFont(name: kFONT, size: 15)
-        self.passwordTextF.borderStyle = .roundedRect
+        self.passwordTextF.layer.borderColor = mainColor.cgColor
+        self.passwordTextF.layer.borderWidth = 0.5
+        self.passwordTextF.layer.cornerRadius = 3
+        self.passwordTextF.setValue(10, forKey: "paddingLeft")
         self.passwordTextF.isSecureTextEntry = true
         self.passwordTextF.placeholder = "密码"
+        self.passwordTextF.delegate = self
         self.view.addSubview(self.passwordTextF)
         
-        self.emailTextF = JVFloatLabeledTextField(frame: CGRect(x: 30, y: self.passwordTextF.bottom+15, width: kSCREENWIDTH-60, height: 44))
+        self.emailTextF = JVFloatLabeledTextField(frame: CGRect(x: 30, y: self.passwordTextF.bottom+15, width: kSCREENWIDTH-60, height: 40))
         self.emailTextF.font = UIFont(name: kFONT, size: 15)
-        self.emailTextF.borderStyle = .roundedRect
+        self.emailTextF.layer.borderColor = mainColor.cgColor
+        self.emailTextF.layer.borderWidth = 0.5
+        self.emailTextF.layer.cornerRadius = 3
         self.emailTextF.isSecureTextEntry = true
+        self.emailTextF.setValue(10, forKey: "paddingLeft")
         self.emailTextF.placeholder = "邮箱"
+        self.emailTextF.delegate = self
         self.view.addSubview(self.emailTextF)
         
-        let loginButton = UIButton(frame: CGRect(x: 30, y: self.emailTextF.bottom+15, width: kSCREENWIDTH-60, height: 44))
+        let loginButton = UIButton(frame: CGRect(x: 30, y: self.emailTextF.bottom+15, width: kSCREENWIDTH-60, height: 40))
         loginButton.titleLabel?.font = UIFont(name: kFONT, size: 15)
         loginButton.setTitle("注册", for: .normal)
         loginButton.backgroundColor = mainColor
@@ -69,8 +81,62 @@ class RegisterViewController: UIViewController {
         self.view.addSubview(loginButton)
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        self.userTextF.layer.borderColor = mainColor.cgColor
+        self.passwordTextF.layer.borderColor = mainColor.cgColor
+        self.emailTextF.layer.borderColor = mainColor.cgColor
+    }
+    
     func registerAction() {
         
+        if (self.userTextF.text?.isEmpty)! {
+        
+            self.userTextF.layer.borderColor = UIColor.red.cgColor
+            ProgressHUD.showError("请输入用户名")
+            return
+        }
+        
+        if (self.passwordTextF.text?.isEmpty)! {
+            
+            self.passwordTextF.layer.borderColor = UIColor.red.cgColor
+            ProgressHUD.showError("请输入密码")
+            return
+        }
+        
+        if (self.emailTextF.text?.isEmpty)! {
+            
+            self.emailTextF.layer.borderColor = UIColor.red.cgColor
+            ProgressHUD.showError("请输入邮箱")
+            return
+        }
+        
+        let user = AVUser()
+        user.username = self.userTextF.text
+        user.password = self.passwordTextF.text
+        user.email = self.emailTextF.text
+        user.signUpInBackground { (success, error) in
+            
+            if success {
+
+                ProgressHUD.showSuccess("注册成功")
+                self.dismiss(animated: true, completion: nil)
+            }else {
+                
+                if (error! as NSError).code == 125 {
+                    ProgressHUD.showError("邮箱不合法")
+                }else if (error! as NSError).code == 203 {
+                    
+                    ProgressHUD.showError("该邮箱已注册")
+                }else if (error! as NSError).code == 202 {
+                    
+                    ProgressHUD.showError("用户名已存在")
+                }else {
+                    
+                    ProgressHUD.showError("注册失败")
+                }
+            }
+        }
         
     }
     

@@ -23,31 +23,40 @@
                 <rect key="frame" x="0.0" y="0.0" width="155" height="157.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gk6-Sa-rei">
-                        <rect key="frame" x="0.0" y="33" width="155" height="117"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCf-do-xKo">
-                        <rect key="frame" x="8" y="8" width="139" height="17"/>
-                        <fontDescription key="fontDescription" name="BauhausITC" family="Bauhaus ITC" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTz-th-xH4">
+                        <rect key="frame" x="8" y="8" width="139" height="141.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyk-hR-omW">
+                                <rect key="frame" x="0.0" y="5" width="139" height="17"/>
+                                <fontDescription key="fontDescription" name="BauhausITC" family="Bauhaus ITC" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TsU-UE-CaM">
+                                <rect key="frame" x="0.0" y="27" width="139" height="114.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.4431372549" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jyk-hR-omW" firstAttribute="leading" secondItem="zTz-th-xH4" secondAttribute="leading" id="3Ib-eC-9cR"/>
+                            <constraint firstAttribute="trailing" secondItem="Jyk-hR-omW" secondAttribute="trailing" id="KFO-du-dkG"/>
+                            <constraint firstAttribute="trailing" secondItem="TsU-UE-CaM" secondAttribute="trailing" id="MwK-cj-dzz"/>
+                            <constraint firstAttribute="bottom" secondItem="TsU-UE-CaM" secondAttribute="bottom" id="aIa-Sy-uzZ"/>
+                            <constraint firstItem="TsU-UE-CaM" firstAttribute="top" secondItem="Jyk-hR-omW" secondAttribute="bottom" constant="5" id="bYK-3p-896"/>
+                            <constraint firstItem="TsU-UE-CaM" firstAttribute="leading" secondItem="zTz-th-xH4" secondAttribute="leading" id="dTL-kI-B8l"/>
+                            <constraint firstItem="Jyk-hR-omW" firstAttribute="top" secondItem="zTz-th-xH4" secondAttribute="top" constant="5" id="oHf-GM-bYA"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="gk6-Sa-rei" secondAttribute="trailing" id="1Ba-xr-Ms8"/>
-                    <constraint firstItem="gk6-Sa-rei" firstAttribute="top" secondItem="lCf-do-xKo" secondAttribute="bottom" constant="8" id="Fuu-5t-PSE"/>
-                    <constraint firstItem="gk6-Sa-rei" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ou0-Y7-y8q"/>
-                    <constraint firstItem="lCf-do-xKo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="btC-gS-4ih"/>
-                    <constraint firstItem="lCf-do-xKo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="jBw-4V-iqF"/>
-                    <constraint firstAttribute="bottom" secondItem="gk6-Sa-rei" secondAttribute="bottom" constant="8" id="u5r-il-ia9"/>
-                    <constraint firstAttribute="trailing" secondItem="lCf-do-xKo" secondAttribute="trailing" constant="8" id="ugx-gD-rUk"/>
+                    <constraint firstAttribute="trailing" secondItem="zTz-th-xH4" secondAttribute="trailing" constant="8" id="2fa-Jn-jwc"/>
+                    <constraint firstItem="zTz-th-xH4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="5B7-Rr-5WG"/>
+                    <constraint firstAttribute="bottom" secondItem="zTz-th-xH4" secondAttribute="bottom" constant="8" id="k5X-5d-iqJ"/>
+                    <constraint firstItem="zTz-th-xH4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tbh-zW-tAj"/>
                 </constraints>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="content" destination="lCf-do-xKo" id="hxE-Vq-5jQ"/>
-                <outlet property="smallImage" destination="gk6-Sa-rei" id="K6j-zG-9iD"/>
-            </connections>
-            <point key="canvasLocation" x="-452" y="127"/>
+            <point key="canvasLocation" x="-592.5" y="112"/>
         </tableViewCell>
     </objects>
 </document>

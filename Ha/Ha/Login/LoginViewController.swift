@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UITextFieldDelegate {
 
     var userTextF: JVFloatLabeledTextField!
     var passwordTextF: JVFloatLabeledTextField!
@@ -30,20 +30,28 @@ class LoginViewController: UIViewController {
         logoImage.image = UIImage(named: "logo")
         self.view.addSubview(logoImage)
         
-        self.userTextF = JVFloatLabeledTextField(frame: CGRect(x: 30, y: logoImage.bottom+15, width: kSCREENWIDTH-60, height: 44))
-        self.userTextF.borderStyle = .roundedRect
+        self.userTextF = JVFloatLabeledTextField(frame: CGRect(x: 30, y: logoImage.bottom+15, width: kSCREENWIDTH-60, height: 40))
+        self.userTextF.layer.borderColor = mainColor.cgColor
+        self.userTextF.layer.borderWidth = 0.5
+        self.userTextF.layer.cornerRadius = 3
+        self.userTextF.setValue(10, forKey: "paddingLeft")
+        self.userTextF.delegate = self
         self.userTextF.font = UIFont(name: kFONT, size: 15)
         self.userTextF.placeholder = "用户名"
         self.view.addSubview(self.userTextF)
         
-        self.passwordTextF = JVFloatLabeledTextField(frame: CGRect(x: 30, y: self.userTextF.bottom+15, width: kSCREENWIDTH-60, height: 44))
+        self.passwordTextF = JVFloatLabeledTextField(frame: CGRect(x: 30, y: self.userTextF.bottom+15, width: kSCREENWIDTH-60, height: 40))
         self.passwordTextF.font = UIFont(name: kFONT, size: 15)
-        self.passwordTextF.borderStyle = .roundedRect
+        self.passwordTextF.layer.borderColor = mainColor.cgColor
+        self.passwordTextF.layer.borderWidth = 0.5
+        self.passwordTextF.layer.cornerRadius = 3
+        self.passwordTextF.setValue(10, forKey: "paddingLeft")
         self.passwordTextF.isSecureTextEntry = true
         self.passwordTextF.placeholder = "密码"
+        self.passwordTextF.delegate = self
         self.view.addSubview(self.passwordTextF)
         
-        let loginButton = UIButton(frame: CGRect(x: 30, y: self.passwordTextF.bottom+15, width: kSCREENWIDTH-60, height: 44))
+        let loginButton = UIButton(frame: CGRect(x: 30, y: self.passwordTextF.bottom+15, width: kSCREENWIDTH-60, height: 40))
         loginButton.titleLabel?.font = UIFont(name: kFONT, size: 15)
         loginButton.setTitle("登陆", for: .normal)
         loginButton.backgroundColor = mainColor
@@ -61,10 +69,39 @@ class LoginViewController: UIViewController {
         
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        self.userTextF.layer.borderColor = mainColor.cgColor
+        self.passwordTextF.layer.borderColor = mainColor.cgColor
+    }
+    
     func loginAction() {
         
-        self.dismiss(animated: true, completion: nil)
+        if (self.userTextF.text?.isEmpty)! {
+            
+            self.userTextF.layer.borderColor = UIColor.red.cgColor
+            ProgressHUD.showError("请输入用户名")
+            return
+        }
         
+        if (self.passwordTextF.text?.isEmpty)! {
+            
+            self.passwordTextF.layer.borderColor = UIColor.red.cgColor
+            ProgressHUD.showError("请输入密码")
+            return
+        }
+        
+        AVUser.logInWithUsername(inBackground: self.userTextF.text!, password: self.passwordTextF.text!) { (success, error) in
+            
+            if (success != nil) {
+                
+                ProgressHUD.showSuccess("登录成功")
+                self.dismiss(animated: true, completion: nil)
+            }else {
+                
+                ProgressHUD.showSuccess("登录失败")
+            }
+        }
     }
     
     func registerAction() {

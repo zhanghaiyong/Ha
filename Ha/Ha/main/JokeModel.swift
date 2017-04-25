@@ -10,9 +10,10 @@ import UIKit
 
 class JokeModel: NSObject {
 
-    var content : String = ""
-    var hashId : String = ""
-    var unixtime : String = ""
-    var updatetime : String = ""
-    var url : String = ""
+    var id : String = ""
+    var title : String = ""
+    var text : String = ""
+    var type : String = ""
+    var ct : String = ""
+    var img : String = ""
 }

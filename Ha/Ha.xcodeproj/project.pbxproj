@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E873F6E0D15244414B8420A /* libPods-Ha.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD913E2F96BAAFFB5A40A6B2 /* libPods-Ha.a */; };
+		9901499A1EAEF90300D7C146 /* BaseParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990149991EAEF90300D7C146 /* BaseParams.swift */; };
+		9901499C1EAEFAB900D7C146 /* jokeParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9901499B1EAEFAB900D7C146 /* jokeParams.swift */; };
 		99173EC61EA0D1D200CDE419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99173EC51EA0D1D200CDE419 /* AppDelegate.swift */; };
 		99173ECD1EA0D1D200CDE419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99173ECC1EA0D1D200CDE419 /* Assets.xcassets */; };
 		99173ED01EA0D1D200CDE419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99173ECE1EA0D1D200CDE419 /* LaunchScreen.storyboard */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		990149991EAEF90300D7C146 /* BaseParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseParams.swift; sourceTree = "<group>"; };
+		9901499B1EAEFAB900D7C146 /* jokeParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jokeParams.swift; sourceTree = "<group>"; };
 		99173EC21EA0D1D200CDE419 /* Ha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99173EC51EA0D1D200CDE419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99173ECC1EA0D1D200CDE419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				993653EE1EA8AA81005A4108 /* JokeModel.swift */,
+				9901499B1EAEFAB900D7C146 /* jokeParams.swift */,
 			);
 			name = M;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			children = (
 				99910BAE1EA9E57C00C26B51 /* NoDataView.swift */,
 				99910BB01EA9E58A00C26B51 /* NoDataView.xib */,
+				990149991EAEF90300D7C146 /* BaseParams.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -373,9 +379,11 @@
 				99ECBF3A1EAB313300959FBD /* ImageCell.swift in Sources */,
 				99173EDB1EA0D2AD00CDE419 /* config.swift in Sources */,
 				993653E31EA85108005A4108 /* ProgressHUD.m in Sources */,
+				9901499A1EAEF90300D7C146 /* BaseParams.swift in Sources */,
 				993653EC1EA89C18005A4108 /* MainCell.swift in Sources */,
 				993653E61EA89713005A4108 /* MainViewController.swift in Sources */,
 				9997F2C71EA7331B00EEDC3D /* FactoryFile.swift in Sources */,
+				9901499C1EAEFAB900D7C146 /* jokeParams.swift in Sources */,
 				99910BAF1EA9E57C00C26B51 /* NoDataView.swift in Sources */,
 				99ECBF471EAB573D00959FBD /* RegisterViewController.swift in Sources */,
 				99910BB31EA9EB7800C26B51 /* SegmentView.swift in Sources */,
