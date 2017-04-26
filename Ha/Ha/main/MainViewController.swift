@@ -14,12 +14,9 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var textTable : UITableView?
     //图片
     var imageTable : UITableView?
-    //动态
-    var dynamicTable : UITableView?
     
     var textData = NSMutableArray()
     var imageData = NSMutableArray()
-    var dynamicData = NSMutableArray()
     var scrolView : UIScrollView?
     var textFootParams : jokeParams = jokeParams()
     var imageFootParams : jokeParams = jokeParams()
@@ -48,25 +45,22 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             self.initSubViews()
             
             self.segment = Bundle.main.loadNibNamed("SegmentView", owner: self, options: nil)?.last as? SegmentView
-            self.segment?.frame = CGRect(x: kSCREENWIDTH/2-100, y: (self.scrolView?.bottom)!-50, width: 200, height: 38)
+            self.segment?.frame = CGRect(x: kSCREENWIDTH/2-50, y: (self.scrolView?.bottom)!-50, width: 100, height: 38)
             self.segment?.callBack = ({(tag) -> Void in
                 
                 switch tag {
                 case 100:
                     self.scrolView?.contentOffset = CGPoint(x: 0, y: (self.scrolView?.contentOffset.y)!)
+                    if self.textData.count == 0 {
+                        
+                        self.textFootRefresh()
+                    }
                     break
                 case 200:
                     self.scrolView?.contentOffset = CGPoint(x: kSCREENWIDTH, y: (self.scrolView?.contentOffset.y)!)
                     if self.imageData.count == 0 {
                         
                         self.imageFootRefresh()
-                    }
-                    break
-                case 300:
-                    self.scrolView?.contentOffset = CGPoint(x: kSCREENWIDTH*2, y: (self.scrolView?.contentOffset.y)!)
-                    if self.dynamicData.count == 0 {
-                        
-                        self.dynamicFootRefresh()
                     }
                     break
                 default:
@@ -77,11 +71,12 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             self.view.addSubview(self.segment!)
         }
     }
+    
 
     func initSubViews() {
         
-        self.scrolView = UIScrollView(frame: CGRect(x: 0, y: 0, width: kSCREENWIDTH, height: kSCREENHEIGHT))
-        self.scrolView?.contentSize = CGSize(width: 3*kSCREENWIDTH, height: kSCREENHEIGHT-64)
+        self.scrolView = UIScrollView(frame: CGRect(x: 0, y: 0, width: kSCREENWIDTH, height: kSCREENHEIGHT-49))
+        self.scrolView?.contentSize = CGSize(width: 2*kSCREENWIDTH, height: kSCREENHEIGHT-49)
         self.scrolView?.isPagingEnabled = true
         self.scrolView?.delegate = self
         self.scrolView?.isScrollEnabled = false
@@ -89,7 +84,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.view.addSubview(self.scrolView!)
         
 
-        self.textTable = UITableView(frame: CGRect(x: 0, y: 0, width: kSCREENWIDTH, height: kSCREENHEIGHT-64))
+        self.textTable = UITableView(frame: CGRect(x: 0, y: 0, width: kSCREENWIDTH, height: kSCREENHEIGHT-49))
         self.textTable?.delegate = self;
         self.textTable?.dataSource = self;
         self.textTable?.estimatedRowHeight = 300
@@ -99,30 +94,16 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.textTable?.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(MainViewController.textFootRefresh))
         self.textFootRefresh()
         
-        self.imageTable = UITableView(frame: CGRect(x: kSCREENWIDTH, y: 0, width: kSCREENWIDTH, height: kSCREENHEIGHT-64))
+        self.imageTable = UITableView(frame: CGRect(x: kSCREENWIDTH, y: 0, width: kSCREENWIDTH, height: kSCREENHEIGHT-49))
         self.imageTable?.delegate = self;
         self.imageTable?.dataSource = self;
-        self.imageTable?.estimatedRowHeight = 300
+        self.imageTable?.register(ImageCell.classForCoder(), forCellReuseIdentifier: "imageCell")
+        self.imageTable?.estimatedRowHeight = 100
         self.imageTable?.rowHeight = UITableViewAutomaticDimension
         self.imageTable?.tableFooterView = UIView()
         self.imageTable?.separatorInset = UIEdgeInsetsMake(0, -60, 0, -60)
         self.scrolView!.addSubview(self.imageTable!)
         self.imageTable?.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(MainViewController.imageFootRefresh))
-        
-        self.dynamicTable = UITableView(frame: CGRect(x: kSCREENWIDTH*2, y: 0, width: kSCREENWIDTH, height: kSCREENHEIGHT-64))
-        self.dynamicTable?.delegate = self;
-        self.dynamicTable?.dataSource = self;
-        self.dynamicTable?.estimatedRowHeight = 300
-        self.dynamicTable?.rowHeight = UITableViewAutomaticDimension
-        self.dynamicTable?.tableFooterView = UIView()
-        self.dynamicTable?.separatorInset = UIEdgeInsetsMake(0, -60, 0, -60)
-        self.scrolView!.addSubview(self.dynamicTable!)
-        self.dynamicTable?.mj_footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: #selector(MainViewController.dynamicFootRefresh))
-        
-    }
-    
-    
-    func dynamicFootRefresh() {
         
     }
     
@@ -132,7 +113,10 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         ProgressHUD.show("")
         
         self.imageFootParams.time = "2000-01-10"
-        self.imageFootParams.page = "\(Int(self.imageFootParams.page!)! + 1)"
+        let tp : String = UserDefaults.standard.object(forKey: imagePage) as! String
+        self.imageFootParams.page = "\(Int(tp)! + 1)"
+        UserDefaults.standard.set(self.imageFootParams.page, forKey: imagePage)
+        UserDefaults.standard.synchronize()
         
         let manager = AFHTTPSessionManager()
         manager.responseSerializer.acceptableContentTypes = NSSet(objects: "application/json") as? Set<String>
@@ -167,7 +151,6 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             print(error)
             self.imageTable?.mj_footer.endRefreshing()
         }
-
     }
     
     func textFootRefresh() {
@@ -175,7 +158,10 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         ProgressHUD.show("")
 
         self.textFootParams.time = "2000-01-10"
-        self.textFootParams.page = "\(Int(self.textFootParams.page!)! + 1)"
+        let tp : String = UserDefaults.standard.object(forKey: textPage) as! String
+        self.textFootParams.page = "\(Int(tp)! + 1)"
+        UserDefaults.standard.set(self.textFootParams.page, forKey: textPage)
+        UserDefaults.standard.synchronize()
         
         let manager = AFHTTPSessionManager()
         manager.responseSerializer.acceptableContentTypes = NSSet(objects: "application/json") as? Set<String>
@@ -244,7 +230,18 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             
             let model = self.imageData[indexPath.row] as? JokeModel
             cell?.content.text = model?.title
-            cell?.smallImage.sd_setImage(with: URL.init(string: (model?.img)!), placeholderImage: UIImage(named: "noImage"))
+            cell?.smallImage.image = UIImage(named: "noImage")
+   
+            let imageV = UIImageView(frame: CGRect(x: 0, y: (cell?.content.bottom)!, width: kSCREENWIDTH, height: 100))
+            imageV.sd_setImage(with: URL.init(string: (model?.img)!), placeholderImage: UIImage(named: "noImage"), options: .retryFailed, progress: { (a, b) in
+                
+            }, completed: { (image, error, type, url) in
+                
+                cell?.smallImage.image = image
+                cell?.Indicator.stopAnimating()
+                cell?.Indicator.isHidden = true
+            })
+            
             return cell!
         }
     }

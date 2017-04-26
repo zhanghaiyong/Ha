@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kme-0t-7eY">
-                    <rect key="frame" x="1" y="1" width="111.5" height="58"/>
+                    <rect key="frame" x="1" y="1" width="168" height="58"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" name="BauhausITC" family="Bauhaus ITC" pointSize="16"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -36,7 +36,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" clipsSubviews="YES" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eU-8q-cfO">
-                    <rect key="frame" x="113.5" y="1" width="112" height="58"/>
+                    <rect key="frame" x="170" y="1" width="168" height="58"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" name="BauhausITC" family="Bauhaus ITC" pointSize="16"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -50,40 +50,20 @@
                         <action selector="switchAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="7wF-Jj-aIX"/>
                     </connections>
                 </button>
-                <button opaque="NO" clipsSubviews="YES" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwK-I5-cHm">
-                    <rect key="frame" x="226.5" y="1" width="111.5" height="58"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="BauhausITC" family="Bauhaus ITC" pointSize="16"/>
-                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="动态图">
-                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="selected">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="switchAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="gNe-2M-cuP"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="HwK-I5-cHm" secondAttribute="trailing" constant="1" id="1vB-vY-CuJ"/>
                 <constraint firstItem="3eU-8q-cfO" firstAttribute="leading" secondItem="kme-0t-7eY" secondAttribute="trailing" constant="1" id="2Js-Vy-6Y6"/>
-                <constraint firstItem="HwK-I5-cHm" firstAttribute="leading" secondItem="3eU-8q-cfO" secondAttribute="trailing" constant="1" id="NJ5-cC-87H"/>
                 <constraint firstItem="kme-0t-7eY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="O4y-g2-lNm"/>
                 <constraint firstAttribute="bottom" secondItem="3eU-8q-cfO" secondAttribute="bottom" constant="1" id="RZr-g8-WSd"/>
-                <constraint firstAttribute="bottom" secondItem="HwK-I5-cHm" secondAttribute="bottom" constant="1" id="TnY-Oq-Uu7"/>
+                <constraint firstAttribute="trailing" secondItem="3eU-8q-cfO" secondAttribute="trailing" constant="1" id="UHC-nz-wOM"/>
                 <constraint firstAttribute="bottom" secondItem="kme-0t-7eY" secondAttribute="bottom" constant="1" id="YYk-Py-8Ye"/>
                 <constraint firstItem="3eU-8q-cfO" firstAttribute="width" secondItem="kme-0t-7eY" secondAttribute="width" id="cOf-cz-Jlj"/>
-                <constraint firstItem="HwK-I5-cHm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="h3j-sV-LKi"/>
                 <constraint firstItem="3eU-8q-cfO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="kN9-va-cKD"/>
                 <constraint firstItem="kme-0t-7eY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="1" id="n4x-bW-oga"/>
-                <constraint firstItem="HwK-I5-cHm" firstAttribute="width" secondItem="kme-0t-7eY" secondAttribute="width" id="zZJ-pl-vYJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="dynamicBtn" destination="HwK-I5-cHm" id="GNB-tW-8zh"/>
                 <outlet property="imageBtn" destination="3eU-8q-cfO" id="yvC-NJ-Hyc"/>
                 <outlet property="jokeBtn" destination="kme-0t-7eY" id="914-4o-DnS"/>
             </connections>

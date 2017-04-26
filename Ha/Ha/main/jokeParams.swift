@@ -15,5 +15,5 @@ class jokeParams: BaseParams {
     //第几页。
     var page : String? = "0"
     //每页最大记录数。其值为1至50。
-    var maxResult : String? = "15"
+    var maxResult : String? = "20"
 }

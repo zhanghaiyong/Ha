@@ -12,21 +12,52 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var mapManager : BMKMapManager?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
+        self.mapManager = BMKMapManager()
+        if !(self.mapManager?.start("ErrYH572owYbsLK1TswTzHGLhml51EpN", generalDelegate: nil))! {
+        
+            print("manager start failed!")
+        }
 
+        
+        if UserDefaults.standard.object(forKey: textPage) as? String == "500" ||  UserDefaults.standard.object(forKey: textPage) == nil{
+             UserDefaults.standard.set("0", forKey: textPage)
+             UserDefaults.standard.synchronize()
+        }
+        
+        if UserDefaults.standard.object(forKey: imagePage) as? String == "500" || UserDefaults.standard.object(forKey: imagePage) == nil{
+            UserDefaults.standard.set("0", forKey: imagePage)
+            UserDefaults.standard.synchronize()
+        }
+        
+        
+        
         UINavigationBar.appearance().tintColor = UIColor.white;
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for: UIBarMetrics.default)
         
         UINavigationBar.appearance().barTintColor = mainColor
 
         
-        let main =  MainViewController()
-        self.window?.rootViewController = UINavigationController(rootViewController: main)
+        let tabbar = UITabBarController()
+
+        let mainNv = UINavigationController(rootViewController: MainViewController())
+        let nearByNv = UINavigationController(rootViewController: NearByController())
+        
+        let tabBatItem1 = UITabBarItem(title: "开心一刻", image: nil, selectedImage: nil)
+        mainNv.tabBarItem = tabBatItem1
+        
+        let tabBatItem2 = UITabBarItem(title: "附近看看", image: nil, selectedImage: nil)
+        nearByNv.tabBarItem = tabBatItem2
+        
+        tabbar.viewControllers = [mainNv,nearByNv]
+        
+        self.window?.rootViewController = tabbar
         
         self.window?.makeKeyAndVisible()
         

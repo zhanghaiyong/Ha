@@ -14,7 +14,6 @@ class SegmentView: UIView {
     
     @IBOutlet weak var jokeBtn: UIButton!
     @IBOutlet weak var imageBtn: UIButton!
-    @IBOutlet weak var dynamicBtn: UIButton!
     var callBack : segmentBlock?
     
     override func awakeFromNib() {
@@ -38,12 +37,6 @@ class SegmentView: UIView {
         maskLayer2.path = maskPath2.cgPath;
         self.imageBtn.layer.mask = maskLayer2;
         
-        let maskPath3 = UIBezierPath.init(roundedRect: self.jokeBtn.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: 0, height: 0))
-        let maskLayer3 = CAShapeLayer();
-        maskLayer3.frame = self.jokeBtn.bounds;
-        maskLayer3.path = maskPath3.cgPath;
-        self.dynamicBtn.layer.mask = maskLayer3;
-        
         
     }
     
@@ -55,32 +48,18 @@ class SegmentView: UIView {
         case 100:
             self.jokeBtn.backgroundColor    = mainColor
             self.imageBtn.backgroundColor   = UIColor.white
-            self.dynamicBtn.backgroundColor = UIColor.white
             
             self.jokeBtn.isSelected    = true
             self.imageBtn.isSelected   = false
-            self.dynamicBtn.isSelected = false
             
         break
         case 200:
             self.imageBtn.backgroundColor   = mainColor
             self.jokeBtn.backgroundColor    = UIColor.white
-            self.dynamicBtn.backgroundColor = UIColor.white
             
             self.jokeBtn.isSelected    = false
             self.imageBtn.isSelected   = true
-            self.dynamicBtn.isSelected = false
             
-        break
-        case 300:
-            
-            self.jokeBtn.isSelected    = false
-            self.imageBtn.isSelected   = false
-            self.dynamicBtn.isSelected = true
-            
-            self.dynamicBtn.backgroundColor = mainColor
-            self.imageBtn.backgroundColor   = UIColor.white
-            self.jokeBtn.backgroundColor    = UIColor.white
         break
             
         default:

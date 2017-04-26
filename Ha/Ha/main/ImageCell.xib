@@ -16,7 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="158" id="KGk-i7-Jjw" customClass="ImageCell" customModule="Ha" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="158" id="KGk-i7-Jjw" customClass="ImageCell" customModule="Ha" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="155" height="158"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -27,28 +27,33 @@
                         <rect key="frame" x="8" y="8" width="139" height="141.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyk-hR-omW">
-                                <rect key="frame" x="0.0" y="5" width="139" height="17"/>
+                                <rect key="frame" x="0.0" y="10" width="139" height="17"/>
                                 <fontDescription key="fontDescription" name="BauhausITC" family="Bauhaus ITC" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TsU-UE-CaM">
-                                <rect key="frame" x="0.0" y="27" width="139" height="114.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TsU-UE-CaM">
+                                <rect key="frame" x="0.0" y="37" width="139" height="104.5"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jEa-4L-rao">
+                                <rect key="frame" x="59.5" y="61" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="0.95686274510000002" green="0.4431372549" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Jyk-hR-omW" firstAttribute="leading" secondItem="zTz-th-xH4" secondAttribute="leading" id="3Ib-eC-9cR"/>
+                            <constraint firstItem="jEa-4L-rao" firstAttribute="centerX" secondItem="zTz-th-xH4" secondAttribute="centerX" id="Etc-o9-8Wi"/>
+                            <constraint firstItem="jEa-4L-rao" firstAttribute="centerY" secondItem="zTz-th-xH4" secondAttribute="centerY" id="HtL-1v-ui8"/>
                             <constraint firstAttribute="trailing" secondItem="Jyk-hR-omW" secondAttribute="trailing" id="KFO-du-dkG"/>
                             <constraint firstAttribute="trailing" secondItem="TsU-UE-CaM" secondAttribute="trailing" id="MwK-cj-dzz"/>
                             <constraint firstAttribute="bottom" secondItem="TsU-UE-CaM" secondAttribute="bottom" id="aIa-Sy-uzZ"/>
-                            <constraint firstItem="TsU-UE-CaM" firstAttribute="top" secondItem="Jyk-hR-omW" secondAttribute="bottom" constant="5" id="bYK-3p-896"/>
+                            <constraint firstItem="TsU-UE-CaM" firstAttribute="top" secondItem="Jyk-hR-omW" secondAttribute="bottom" constant="10" id="bYK-3p-896"/>
                             <constraint firstItem="TsU-UE-CaM" firstAttribute="leading" secondItem="zTz-th-xH4" secondAttribute="leading" id="dTL-kI-B8l"/>
-                            <constraint firstItem="Jyk-hR-omW" firstAttribute="top" secondItem="zTz-th-xH4" secondAttribute="top" constant="5" id="oHf-GM-bYA"/>
+                            <constraint firstItem="Jyk-hR-omW" firstAttribute="top" secondItem="zTz-th-xH4" secondAttribute="top" constant="10" id="oHf-GM-bYA"/>
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="zTz-th-xH4" secondAttribute="trailing" constant="8" id="2fa-Jn-jwc"/>
                     <constraint firstItem="zTz-th-xH4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="5B7-Rr-5WG"/>
@@ -56,7 +61,12 @@
                     <constraint firstItem="zTz-th-xH4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="tbh-zW-tAj"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="-592.5" y="112"/>
+            <connections>
+                <outlet property="Indicator" destination="jEa-4L-rao" id="ZQU-EZ-iwC"/>
+                <outlet property="content" destination="Jyk-hR-omW" id="oin-X6-Ihd"/>
+                <outlet property="smallImage" destination="TsU-UE-CaM" id="Fg8-eH-jIH"/>
+            </connections>
+            <point key="canvasLocation" x="-820.5" y="101"/>
         </tableViewCell>
     </objects>
 </document>

@@ -27,6 +27,8 @@
 		99910BB31EA9EB7800C26B51 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99910BB21EA9EB7800C26B51 /* SegmentView.swift */; };
 		99910BB51EA9EB8000C26B51 /* SegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99910BB41EA9EB8000C26B51 /* SegmentView.xib */; };
 		9997F2C71EA7331B00EEDC3D /* FactoryFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9997F2C61EA7331B00EEDC3D /* FactoryFile.swift */; };
+		99E531421EB049470060210B /* RadarAnimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E531411EB049470060210B /* RadarAnimateView.swift */; };
+		99E531481EB0738A0060210B /* NearByController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E531471EB0738A0060210B /* NearByController.swift */; };
 		99ECBF3A1EAB313300959FBD /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECBF381EAB313300959FBD /* ImageCell.swift */; };
 		99ECBF3B1EAB313300959FBD /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99ECBF391EAB313300959FBD /* ImageCell.xib */; };
 		99ECBF431EAB4CF700959FBD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECBF421EAB4CF700959FBD /* LoginViewController.swift */; };
@@ -58,6 +60,8 @@
 		99910BB21EA9EB7800C26B51 /* SegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
 		99910BB41EA9EB8000C26B51 /* SegmentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentView.xib; sourceTree = "<group>"; };
 		9997F2C61EA7331B00EEDC3D /* FactoryFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryFile.swift; sourceTree = "<group>"; };
+		99E531411EB049470060210B /* RadarAnimateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadarAnimateView.swift; path = ../Common/RadarAnimateView.swift; sourceTree = "<group>"; };
+		99E531471EB0738A0060210B /* NearByController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearByController.swift; sourceTree = "<group>"; };
 		99ECBF381EAB313300959FBD /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		99ECBF391EAB313300959FBD /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		99ECBF421EAB4CF700959FBD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 		99173EC41EA0D1D200CDE419 /* Ha */ = {
 			isa = PBXGroup;
 			children = (
+				99E531431EB073570060210B /* nearby */,
 				99910BAD1EA9E55800C26B51 /* Common */,
 				9997F2C51EA7330600EEDC3D /* Helper */,
 				99ECBF3C1EAB453E00959FBD /* Login */,
@@ -209,6 +214,39 @@
 				9997F2C61EA7331B00EEDC3D /* FactoryFile.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		99E531431EB073570060210B /* nearby */ = {
+			isa = PBXGroup;
+			children = (
+				99E531461EB073660060210B /* C */,
+				99E531451EB073620060210B /* V */,
+				99E531441EB0735B0060210B /* M */,
+			);
+			path = nearby;
+			sourceTree = "<group>";
+		};
+		99E531441EB0735B0060210B /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		99E531451EB073620060210B /* V */ = {
+			isa = PBXGroup;
+			children = (
+				99E531411EB049470060210B /* RadarAnimateView.swift */,
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
+		99E531461EB073660060210B /* C */ = {
+			isa = PBXGroup;
+			children = (
+				99E531471EB0738A0060210B /* NearByController.swift */,
+			);
+			name = C;
 			sourceTree = "<group>";
 		};
 		99ECBF3C1EAB453E00959FBD /* Login */ = {
@@ -378,6 +416,7 @@
 				993653EF1EA8AA81005A4108 /* JokeModel.swift in Sources */,
 				99ECBF3A1EAB313300959FBD /* ImageCell.swift in Sources */,
 				99173EDB1EA0D2AD00CDE419 /* config.swift in Sources */,
+				99E531421EB049470060210B /* RadarAnimateView.swift in Sources */,
 				993653E31EA85108005A4108 /* ProgressHUD.m in Sources */,
 				9901499A1EAEF90300D7C146 /* BaseParams.swift in Sources */,
 				993653EC1EA89C18005A4108 /* MainCell.swift in Sources */,
@@ -385,6 +424,7 @@
 				9997F2C71EA7331B00EEDC3D /* FactoryFile.swift in Sources */,
 				9901499C1EAEFAB900D7C146 /* jokeParams.swift in Sources */,
 				99910BAF1EA9E57C00C26B51 /* NoDataView.swift in Sources */,
+				99E531481EB0738A0060210B /* NearByController.swift in Sources */,
 				99ECBF471EAB573D00959FBD /* RegisterViewController.swift in Sources */,
 				99910BB31EA9EB7800C26B51 /* SegmentView.swift in Sources */,
 				99173EC61EA0D1D200CDE419 /* AppDelegate.swift in Sources */,
@@ -506,7 +546,7 @@
 				DEVELOPMENT_TEAM = AKEZGLTY8R;
 				INFOPLIST_FILE = Ha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sosoyy.m.api;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghaiyong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/yangqian/Ha/Ha/Ha/bridging.h;
 				SWIFT_VERSION = 3.0;
@@ -521,7 +561,7 @@
 				DEVELOPMENT_TEAM = AKEZGLTY8R;
 				INFOPLIST_FILE = Ha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sosoyy.m.api;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhanghaiyong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = /Users/yangqian/Ha/Ha/Ha/bridging.h;
 				SWIFT_VERSION = 3.0;
